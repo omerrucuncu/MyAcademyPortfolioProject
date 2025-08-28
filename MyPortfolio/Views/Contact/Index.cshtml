@@ -1,0 +1,38 @@
+﻿@model List<MyPortfolio.Models.TblContacts>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>İletişim</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th style="text-align : center">#</th>
+        <th style="text-align : center">Ad Soyad</th>
+        <th style="text-align : center">Adres</th>
+        <th style="text-align : center">Telefon</th>
+        <th style="text-align : center">E-Mail</th>
+        <th style="text-align : center; background-color : red">Sil</th>
+        <th style="text-align : center; background-color : green">Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ContactId</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Address</td>
+            <td>@item.Phone</td>
+            <td>@item.Email</td>
+            <td style="text-align : center"><a href="#" class="btn btn-outline-danger">Sil</a></td>
+            <td style="text-align : center"><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<br />
+<button class="btn btn-outline-dark">Yeni İletişim Ekle</button>
+

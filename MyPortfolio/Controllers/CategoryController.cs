@@ -15,5 +15,20 @@ namespace MyPortfolio.Controllers
             var values = entities.TblCategories.ToList();   
             return View(values);
         }
+
+        [HttpGet]
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddCategory(TblCategories categories)
+        {
+            entities.TblCategories.Add(categories);
+            entities.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }

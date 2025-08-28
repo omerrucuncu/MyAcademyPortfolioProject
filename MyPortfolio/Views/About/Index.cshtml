@@ -25,11 +25,11 @@
             <td>@item.ImageUrl</td>
             <td>@item.Title</td>
             <td>@item.Description</td>
-            <td style="text-align : center"><a href="#" class="btn btn-outline-danger">Sil</a></td>
-            <td style="text-align : center"><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align : center"><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-outline-danger">Sil</a></td>
+            <td style="text-align : center"><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
 
 <br />
-<button class="btn btn-outline-dark">Yeni Hakkımda Ekle</button>
+<a href="/About/AddAbout" class="btn btn-outline-dark">Yeni Hakkımda Ekle</a>

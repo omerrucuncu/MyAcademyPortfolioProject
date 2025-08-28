@@ -1,0 +1,24 @@
+﻿@model MyPortfolio.Models.TblAbouts
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+<h3>Yeni Hakkımda Ekleme Sayfası</h3>
+
+<form method="post">
+    <label>Resim URL</label>
+    <input type="text" name="ImageUrl" class="form-control" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" />
+    <br />
+    <label>Resim URL</label>
+    <input type="text" name="Description" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+</form>
+

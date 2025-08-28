@@ -5,7 +5,7 @@
 }
 <br />
 <br />
-<h3>Kategoriler</h3>
+<h3>Kategoriler Sayfası</h3>
 
 <table class="table table-bordered">
     <tr>
@@ -20,11 +20,11 @@
         <tr>
             <td>@item.CategoryId</td>
             <td>@item.CategoryName</td>
-            <td style="text-align : center"><a href="#" class="btn btn-outline-danger">Sil</a></td>
-            <td style="text-align : center"><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align : center"><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-outline-danger">Sil</a></td>
+            <td style="text-align : center"><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
 
 <br />
-<button class="btn btn-outline-dark">Yeni Kategori Ekle</button>
+<a href="/Category/AddCategory" class="btn btn-outline-dark">Yeni Kategori Ekle</a>

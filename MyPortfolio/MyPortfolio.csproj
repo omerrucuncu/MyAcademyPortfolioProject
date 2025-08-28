@@ -285,6 +285,9 @@
     <Content Include="Views\About\AddAbout.cshtml" />
     <Content Include="Views\About\UpdateAbout.cshtml" />
     <Content Include="Views\Category\AddCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Contact\AddContact.cshtml" />
+    <Content Include="Views\Contact\UpdateContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

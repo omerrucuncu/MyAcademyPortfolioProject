@@ -30,5 +30,27 @@ namespace MyPortfolio.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult DeleteCategory(int id)
+        {
+            var category = entities.TblCategories.Find(id);
+            entities.TblCategories.Remove(category);
+            entities.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult UpdateCategory(int id)
+        {
+            var category = entities.TblCategories.Find(id);
+            return View(category);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateCategory(TblCategories categories) {
+            var value = entities.TblCategories.Find(categories.CategoryId);
+            value.CategoryName = categories.CategoryName;
+            entities.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

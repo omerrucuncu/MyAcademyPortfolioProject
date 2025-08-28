@@ -27,12 +27,12 @@
             <td>@item.Address</td>
             <td>@item.Phone</td>
             <td>@item.Email</td>
-            <td style="text-align : center"><a href="#" class="btn btn-outline-danger">Sil</a></td>
-            <td style="text-align : center"><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align : center"><a href="/Contact/DeleteContact/@item.ContactId" class="btn btn-outline-danger">Sil</a></td>
+            <td style="text-align : center"><a href="/Contact/UpdateContact/@item.ContactId" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
 
 <br />
-<button class="btn btn-outline-dark">Yeni İletişim Ekle</button>
+<a href="/Contact/AddContact" class="btn btn-outline-dark">Yeni İletişim Ekle</a>
 

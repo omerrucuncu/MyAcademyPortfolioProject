@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyPortfolio.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,11 @@ namespace MyPortfolio.Controllers
 {
     public class CategoryController : Controller
     {
-        // GET: Category
+        MyAcademyPortfolioProjectEntities entities = new MyAcademyPortfolioProjectEntities();
         public ActionResult Index()
         {
-            return View();
+            var values = entities.TblCategories.ToList();   
+            return View(values);
         }
     }
 }

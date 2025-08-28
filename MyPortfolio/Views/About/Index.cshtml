@@ -15,7 +15,7 @@
         <th style="text-align : center">Başlık</th>
         <th style="text-align : center">Açıklama</th>
         <th style="text-align : center; background-color : red">Sil</th>
-        <th style="text-align : center;background-color : green">Güncelle</th>
+        <th style="text-align : center; background-color : green">Güncelle</th>
     </tr>
 
     @foreach (var item in Model)
@@ -25,8 +25,8 @@
             <td>@item.ImageUrl</td>
             <td>@item.Title</td>
             <td>@item.Description</td>
-            <td style="align-content : center"><a href="#" class="btn btn-outline-danger">Sil</a></td>
-            <td style="align-content : center"><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align : center"><a href="#" class="btn btn-outline-danger">Sil</a></td>
+            <td style="text-align : center"><a href="#" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>

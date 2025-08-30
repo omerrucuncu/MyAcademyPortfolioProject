@@ -11,13 +11,12 @@ namespace MyPortfolio.Controllers
     public class DefaultController : Controller
     {
         // GET: Default
-         MyAcademyPortfolioProjectEntities db = new MyAcademyPortfolioProjectEntities();
+        MyAcademyPortfolioProjectEntities db = new MyAcademyPortfolioProjectEntities();
         public ActionResult Index()
         {
             return View();
         }
 
-        
         public PartialViewResult DefaultFeaturePartial()
         {
             var values = db.TblFeatures.ToList();
@@ -27,6 +26,13 @@ namespace MyPortfolio.Controllers
         public PartialViewResult DefaultAboutPartial()
         {
             var values = db.TblAbouts.ToList();
+            return PartialView(values);
+        }
+
+        // FIX: Remove 'partial' keyword from method declaration
+        public PartialViewResult DefaultServicePartial()
+        {
+            var values = db.TblServices.ToList();
             return PartialView(values);
         }
     }

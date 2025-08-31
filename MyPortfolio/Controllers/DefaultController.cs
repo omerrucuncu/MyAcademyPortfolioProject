@@ -32,7 +32,7 @@ namespace MyPortfolio.Controllers
         // FIX: Remove 'partial' keyword from method declaration
         public PartialViewResult DefaultServicePartial()
         {
-            var values = db.TblServices.ToList();
+            var values = db.TblServices.Take(4).ToList();
             return PartialView(values);
         }
 

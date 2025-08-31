@@ -1,0 +1,39 @@
+﻿@model List<MyPortfolio.Models.TblServices>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Servis Ekleme Sayfası</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <td style="text-align : center">#</td>
+        <td style="text-align:center ">Resim URL</td>
+        <td style="text-align:center">Proje Adı</td>
+        <td style="text-align:center">Kategori</td>
+        <td style="text-align:center">Github URL</td>
+        <td style="text-align : center; background-color : red">Sil</td>
+        <td style="text-align : center; background-color : green">Güncelle</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ServiceId</td>
+            <td><img src="@item.Icon" style="height : 50px; width : 50px" /></td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.Status</td>
+            <td style="text-align:center"><a href="/Service/DeleteService/@item.ServiceId" class="btn btn-outline-danger">Sil</a></td>
+            <td style="text-align:center"><a href="/Service/UpdateService/@item.ServiceId" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+
+
+</table>
+<br />
+<a href="/Service/AddService" class="btn btn-outline-dark">Yeni Servis Ekle</a>
+

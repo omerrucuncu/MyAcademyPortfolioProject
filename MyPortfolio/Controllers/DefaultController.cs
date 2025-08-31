@@ -35,5 +35,41 @@ namespace MyPortfolio.Controllers
             var values = db.TblServices.ToList();
             return PartialView(values);
         }
+
+        public PartialViewResult DefaultExperiencePartial()
+        {
+            var values = db.TblExperiences.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultProjectPartial()
+        {
+            var categories = db.TblCategories.ToList();
+            ViewBag.category = categories;
+
+            var values = db.TblProjects.Take(6).ToList();
+
+
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultTestimonialPartial()
+        {
+            var values = db.TblTestimonials.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultTeamPartial()
+        {
+            var values = db.TblTeams.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultContactPartial()
+        {
+            return PartialView();
+        }
     }
+
+
 }

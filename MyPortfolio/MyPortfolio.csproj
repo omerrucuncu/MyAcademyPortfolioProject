@@ -358,6 +358,11 @@
     <Content Include="Views\Default\DefaultFeaturePartial.cshtml" />
     <Content Include="Views\Default\DefaultAboutPartial.cshtml" />
     <Content Include="Views\Default\DefaultServicePartial.cshtml" />
+    <Content Include="Views\Default\DefaultExperiencePartial.cshtml" />
+    <Content Include="Views\Default\DefaultProjectPartial.cshtml" />
+    <Content Include="Views\Default\DefaultTestimonialPartial.cshtml" />
+    <Content Include="Views\Default\DefaultTeamPartial.cshtml" />
+    <Content Include="Views\Default\DefaultContactPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -65,9 +65,19 @@ namespace MyPortfolio.Controllers
             return PartialView(values);
         }
 
-        public PartialViewResult DefaultContactPartial()
+        [HttpGet]
+        public PartialViewResult SendMessage()
         {
             return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult SendMessage(TblMessages p)
+        {
+
+            db.TblMessages.Add(p);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 

@@ -126,6 +126,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Global.asax.cs">
@@ -362,7 +363,8 @@
     <Content Include="Views\Default\DefaultProjectPartial.cshtml" />
     <Content Include="Views\Default\DefaultTestimonialPartial.cshtml" />
     <Content Include="Views\Default\DefaultTeamPartial.cshtml" />
-    <Content Include="Views\Default\DefaultContactPartial.cshtml" />
+    <Content Include="Views\Default\SendMessage.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

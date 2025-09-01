@@ -6,30 +6,25 @@
             <h2>Working Experience</h2>
         </header>
         <div class="timeline">
-            @foreach (var item in Model)
+            @for (int i = 0; i<Model.Count; i++)
             {
 
 
-                <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                <div class="timeline-item @(i%2 == 0 ? "left" : "right") wow slideIn@(i%2 == 0 ? "left" : "right")" data-wow-delay="0.1s">
                     <div class="timeline-text">
-                        <div class="timeline-date">@item.StartYear - @item.EndYear</div>
-                        <h2>@item.Title</h2>
-                        <h4>@item.Company, @item.Location</h4>
+                        <div class="timeline-date">@Model[i].StartYear - @Model[i].EndYear</div>
+                        <h2>@Model[i].Title</h2>
+                        <h4>@Model[i].Company, @Model[i].Location</h4>
                         <p>
-                            @item.Description
+                            @Model[i].Description
                         </p>
                     </div>
                 </div>
-                <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                    <div class="timeline-text">
-                        <div class="timeline-date">@item.StartYear - @item.EndYear</div>
-                        <h2>@item.Title</h2>
-                        <h4>@item.Company, @item.Location</h4>
-                        <p>
-                            @item.Description
-                        </p>
-                    </div>
-                </div>
+
+
+
+
+
 
             }
 

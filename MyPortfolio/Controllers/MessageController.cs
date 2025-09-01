@@ -15,5 +15,15 @@ namespace MyPortfolio.Controllers
             var values = entities.TblMessages.ToList();
             return View(values);
         }
+
+        public ActionResult DeleteMessage(int id)
+        {
+            var values = entities.TblMessages.Find(id);
+            entities.TblMessages.Remove(values);
+            entities.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

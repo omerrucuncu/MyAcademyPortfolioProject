@@ -1,0 +1,37 @@
+﻿﻿@model List<MyPortfolio.Models.TblSkills>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Yeteneklerim Sayfası</h3>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th style="align-content : center ; text-align : center">#</th>
+        <th style="align-content : center ; text-align : center">Teknoloji Adı</th>
+        <th style="align-content : center ; text-align : center">Başarı Değeri(Yüzdelik)</th>
+        <th style="align-content : center ; text-align : center ; background-color : red">Sil</th>
+        <th style="align-content : center ; text-align : center ; background-color : green">Güncelle</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td style="align-content : center ; text-align : center">@item.SkillId</td>
+            <td style="align-content : center ; text-align : center">@item.SkillName</td>
+            <td style="align-content : center ; text-align : center">@item.Value</td>
+
+            <td style="align-content : center ; text-align : center"><a href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-outline-danger">Sil</a></td>
+            <td style="align-content : center ; text-align : center"><a href="/Skill/UpdateSkill/@item.SkillId" class="btn btn-outline-success">Güncelle</a></td>
+
+        </tr>
+    }
+</table>
+<br />
+<a href="/Skill/AddSkill" class="btn btn-outline-dark">Yeni Teknoloji Bilgisi Ekle</a>

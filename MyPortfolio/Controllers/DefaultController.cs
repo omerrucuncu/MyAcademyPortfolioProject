@@ -47,7 +47,9 @@ namespace MyPortfolio.Controllers
             var categories = db.TblCategories.ToList();
             ViewBag.category = categories;
 
-            var values = db.TblProjects.Take(6).ToList();
+            var values = db.TblProjects.ToList();
+
+            //var values = db.TblProjects.Where(x => x.CategoryId == x.TblCategories.CategoryId).ToList();
 
 
             return PartialView(values);
@@ -78,6 +80,12 @@ namespace MyPortfolio.Controllers
             db.TblMessages.Add(p);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public PartialViewResult DefaultSkillPartial()
+        {
+            var values = db.TblSkills.ToList();
+            return PartialView(values);
         }
     }
 

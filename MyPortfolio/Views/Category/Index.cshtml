@@ -10,10 +10,10 @@
 
 <table class="table table-bordered">
     <tr>
-        <th style="text-align : center">#</th>
-        <th style="text-align : center">Kategori Adı</th>        
-        <th style="text-align : center; background-color : red">Sil</th>
-        <th style="text-align : center; background-color : green">Güncelle</th>
+        <th style="text-align: center; align-content: center">#</th>
+        <th style="text-align: center; align-content: center">Kategori Adı</th>        
+        <th style="text-align: center; align-content: center; background-color : red">Sil</th>
+        <th style="text-align: center; align-content: center; background-color : green">Güncelle</th>
     </tr>
 
     @foreach (var item in Model)
@@ -22,8 +22,8 @@
         <tr>
             <td>@count</td>
             <td>@item.CategoryName</td>
-            <td style="text-align : center"><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-outline-danger">Sil</a></td>
-            <td style="text-align : center"><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-outline-danger">Sil</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-outline-success">Güncelle</a></td>
             
         </tr>
     }

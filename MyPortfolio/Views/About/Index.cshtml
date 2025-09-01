@@ -10,12 +10,12 @@
 
 <table class="table table-bordered">
     <tr>
-        <th style="text-align : center">#</th>
-        <th style="text-align : center">Resim URL</th>
-        <th style="text-align : center">Başlık</th>
-        <th style="text-align : center">Açıklama</th>
-        <th style="text-align : center; background-color : red">Sil</th>
-        <th style="text-align : center; background-color : green">Güncelle</th>
+        <th style="text-align: center; align-content: center">#</th>
+        <th style="text-align: center; align-content: center">Resim URL</th>
+        <th style="text-align: center; align-content: center">Başlık</th>
+        <th style="text-align: center; align-content: center">Açıklama</th>
+        <th style="text-align: center; align-content: center; background-color : red">Sil</th>
+        <th style="text-align: center; align-content: center; background-color : green">Güncelle</th>
     </tr>
 
     @foreach (var item in Model)
@@ -25,8 +25,8 @@
             <td>@item.ImageUrl</td>
             <td>@item.Title</td>
             <td>@item.Description</td>
-            <td style="text-align : center"><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-outline-danger">Sil</a></td>
-            <td style="text-align : center"><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align: center; align-content: center"><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-outline-danger">Sil</a></td>
+            <td style="text-align: center; align-content: center"><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>

@@ -18,7 +18,7 @@
                         <div class="service-text">
                             <h3>@item.Title</h3>
                             <p>
-                                @item.Description
+                                @item.Description.Substring(0, Math.Min(item.Description.Length, 200))
                             </p>
                         </div>
                     </div>

@@ -10,25 +10,25 @@
 
 <table class="table table-bordered">
     <tr>
-        <th style="text-align : center">#</th>
-        <th style="text-align : center">Ad Soyad</th>
-        <th style="text-align : center">Adres</th>
-        <th style="text-align : center">Telefon</th>
-        <th style="text-align : center">E-Mail</th>
-        <th style="text-align : center; background-color : red">Sil</th>
-        <th style="text-align : center; background-color : green">Güncelle</th>
+        <th style="text-align: center; align-content: center">#</th>
+        <th style="text-align: center; align-content: center">Ad Soyad</th>
+        <th style="text-align: center; align-content: center">Adres</th>
+        <th style="text-align: center; align-content: center">Telefon</th>
+        <th style="text-align: center; align-content: center">E-Mail</th>
+        <th style="text-align: center; align-content: center; background-color : red">Sil</th>
+        <th style="text-align: center; align-content: center; background-color : green">Güncelle</th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.ContactId</td>
-            <td>@item.NameSurname</td>
-            <td>@item.Address</td>
-            <td>@item.Phone</td>
-            <td>@item.Email</td>
-            <td style="text-align : center"><a href="/Contact/DeleteContact/@item.ContactId" class="btn btn-outline-danger">Sil</a></td>
-            <td style="text-align : center"><a href="/Contact/UpdateContact/@item.ContactId" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align: center; align-content: center">@item.ContactId</td>
+            <td style="text-align: center; align-content: center">@item.NameSurname</td>
+            <td style="text-align: center; align-content: center">@item.Address</td>
+            <td style="text-align: center; align-content: center">@item.Phone</td>
+            <td style="text-align: center; align-content: center">@item.Email</td>
+            <td style="text-align: center; align-content: center"><a href="/Contact/DeleteContact/@item.ContactId" class="btn btn-outline-danger">Sil</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Contact/UpdateContact/@item.ContactId" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>

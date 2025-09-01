@@ -14,6 +14,7 @@ namespace MyPortfolio.Controllers
         {
             var values = entities.TblCategories.ToList();   
             return View(values);
+            asdasd
         }
 
         [HttpGet]

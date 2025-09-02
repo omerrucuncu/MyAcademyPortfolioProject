@@ -8,7 +8,7 @@ using System.Web.Security;
 
 namespace MyPortfolio.Controllers
 {
-    [AllowAnonymous]
+    [AllowAnonymous] // Allow access to all users, including unauthenticated ones
     public class LoginController : Controller
     {
         MyAcademyPortfolioProjectEntities db = new MyAcademyPortfolioProjectEntities();
@@ -27,13 +27,15 @@ namespace MyPortfolio.Controllers
             {
                 FormsAuthentication.SetAuthCookie(admin.UserName, false);
                 Session["UserName"] = admin.UserName;
-                return RedirectToAction("Index", "Default");
+                
+                return RedirectToAction("Index", "About");
             }
             else
             {
                 ModelState.AddModelError("", "Invalid username or password");
+                return View();
             }
-            return View();
+            
         }
 
         public ActionResult LogOut()
@@ -43,4 +45,27 @@ namespace MyPortfolio.Controllers
             return RedirectToAction("Index", "Default");
         }
     }
+
+    //public class SessionTimeoutAttribute : ActionFilterAttribute
+    //{
+    //    public override void OnActionExecuting(ActionExecutingContext filterContext)
+    //    {
+    //        var session = filterContext.HttpContext.Session;
+    //        if (session != null && session["UserName"] == null)
+    //        {
+    //            filterContext.Result = new RedirectResult("~/Login/Index");
+    //        }
+    //        base.OnActionExecuting(filterContext);
+    //    }
+    //}
+
+    //// Step 3: Apply the filter to controllers/actions that require authentication.
+
+    //[SessionTimeout]
+    //[Authorize]
+    //public class SomeProtectedController : Controller
+    //{
+    //    // Your protected actions here
+    //}
 }
+

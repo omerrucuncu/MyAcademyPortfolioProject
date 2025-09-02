@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MyPortfolio.Controllers
 {
+    [AllowAnonymous] // Allow access to all users, including unauthenticated ones
     public class DefaultController : Controller
     {
         // GET: Default
@@ -15,7 +16,7 @@ namespace MyPortfolio.Controllers
         public ActionResult Index()
         {
             return View();
-        }
+        } 
 
         public PartialViewResult DefaultFeaturePartial()
         {

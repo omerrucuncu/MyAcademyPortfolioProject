@@ -6,30 +6,30 @@
 
 <br />
 <br />
-<h3>Hakkımda</h3>
+<h3>About Me Page</h3>
 
 <table class="table table-bordered">
     <tr>
         <th style="text-align: center; align-content: center">#</th>
-        <th style="text-align: center; align-content: center">Resim URL</th>
-        <th style="text-align: center; align-content: center">Başlık</th>
-        <th style="text-align: center; align-content: center">Açıklama</th>
-        <th style="text-align: center; align-content: center; background-color : red">Sil</th>
-        <th style="text-align: center; align-content: center; background-color : green">Güncelle</th>
+        <th style="text-align: center; align-content: center">Image URL</th>
+        <th style="text-align: center; align-content: center">Title</th>
+        <th style="text-align: center; align-content: center">Description</th>
+        <th style="text-align: center; align-content: center; background-color : red">Delete</th>
+        <th style="text-align: center; align-content: center; background-color : green">Update</th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.AboutId</td>
-            <td>@item.ImageUrl</td>
-            <td>@item.Title</td>
-            <td>@item.Description</td>
-            <td style="text-align: center; align-content: center"><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-outline-danger">Sil</a></td>
-            <td style="text-align: center; align-content: center"><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align: center; align-content: center">@item.AboutId</td>
+            <td style="text-align: center; align-content: center">@item.ImageUrl</td>
+            <td style="text-align: center; align-content: center">@item.Title</td>
+            <td style="text-align: center; align-content: center">@item.Description</td>
+            <td style="text-align: center; align-content: center"><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-outline-danger">Delete</a></td>
+            <td style="text-align: center; align-content: center"><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-outline-success">Update</a></td>
         </tr>
     }
 </table>
 
 <br />
-<a href="/About/AddAbout" class="btn btn-outline-dark">Yeni Hakkımda Ekle</a>
+<a href="/About/AddAbout" class="btn btn-outline-dark">Add New About Me</a>

@@ -5,18 +5,18 @@
 }
 <br />
 <br />
-<h3>Mesajlar</h3>
+<h3>Messages</h3>
 
 
 <table class="table table-bordered">
     <tr>
         <th style="text-align : center ; align-content : center">#</th>
-        <th style="text-align : center ; align-content : center">İsim</th>
+        <th style="text-align : center ; align-content : center">Name</th>
         <th style="text-align : center ; align-content : center">E-Mail</th>
-        <th style="text-align : center ; align-content : center">Konu</th>
-        <th style="text-align : center ; align-content : center">Mesaj</th>
-        <th style="text-align : center ; align-content : center ; background-color : red">Sil</th>
-        @*<th style="text-align : center ; align-content : center ; background-color : green">Güncelle</th>*@
+        <th style="text-align : center ; align-content : center">Subject</th>
+        <th style="text-align : center ; align-content : center">Message</th>
+        <th style="text-align : center ; align-content : center ; background-color : red">Delete</th>
+        @*<th style="text-align : center ; align-content : center ; background-color : green">Update</th>*@
     </tr>
 
     @foreach (var item in Model)
@@ -27,8 +27,8 @@
             <td style="text-align : center ; align-content : center">@item.Email</td>
             <td style="text-align : center ; align-content : center">@item.Subject</td>
             <td style="text-align : center ; align-content : center">@item.MessageContent</td>
-            <td style="text-align : center ; align-content : center"><a href="/Message/DeleteMessage/@item.MessageId" class="btn btn-outline-danger">Sil</a></td>
-            @*<td style="text-align : center ; align-content : center"><a href="#" class="btn btn-outline-success">Güncelle</a></td>*@
+            <td style="text-align : center ; align-content : center"><a href="/Message/DeleteMessage/@item.MessageId" class="btn btn-outline-danger">Delete</a></td>
+            @*<td style="text-align : center ; align-content : center"><a href="#" class="btn btn-outline-success">Update</a></td>*@
         </tr>
     }
 </table>

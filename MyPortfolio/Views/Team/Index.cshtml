@@ -20,8 +20,8 @@
         <th style="text-align: center; align-content: center">Linkedin URL</th>
         <th style="text-align: center; align-content: center">Instagram URL</th>
         <th style="text-align: center; align-content: center">Durum</th>
-        <th style="text-align: center; background-color : red ; align-content : center">Sil</th>
-        <th style="text-align: center; background-color : green ; align-content: center">Güncelle</th>
+        <th style="text-align: center; background-color : red ; align-content : center">Delete</th>
+        <th style="text-align: center; background-color : green ; align-content: center">Update</th>
         <th style="text-align: center; align-content: center">Aktif Yap</th>
         <th style="text-align: center; align-content: center">Pasif Yap</th>
     </tr>
@@ -38,8 +38,8 @@
             <td style="align-content: center; text-align: center">@item.LinkedInUrl</td>
             <td style="align-content: center; text-align: center">@item.InstagramUrl</td>
             <td style="align-content: center; text-align: center">@(item.Status == true ? "Aktif" : "Pasif")</td>
-            <td style="text-align: center; align-content: center"><a href="/Team/DeleteTeam/@item.TeamId" class="btn btn-outline-danger ">Sil</a></td>
-            <td style="text-align: center; align-content: center"><a href="/Team/UpdateTeam/@item.TeamId" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Team/DeleteTeam/@item.TeamId" class="btn btn-outline-danger ">Delete</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Team/UpdateTeam/@item.TeamId" class="btn btn-outline-success">Update</a></td>
             <td style="text-align: center; align-content: center"><a href="/Team/MakeActive/@item.TeamId" class="btn btn-outline-info">Aktif Yap</a></td>
             <td style="text-align: center; align-content: center"><a href="/Team/MakePassive/@item.TeamId" class="btn btn-outline-warning">Pasif Yap</a></td>
         </tr>

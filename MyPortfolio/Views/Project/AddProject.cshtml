@@ -5,23 +5,23 @@
 }
 <br />
 <br />
-<h3>Proje Ekleme Sayfası</h3>
+<h3>Add Project Page</h3>
 
 <form method="post">
-    <label>Resim URL</label>
+    <label>Image URL</label>
     <input type="text" name="ImageUrl" class="form-control" />
     <br />
-    <label>Proje Adı</label>
+    <label>Project Name</label>
     <input type="text" name="ProjectName" class="form-control" />
     <br />
-    <label>Kategori Adı</label>
+    <label>Category Name</label>
     @*@Html.DropDownListFor(
         model => model.CategoryId,
         (List<SelectListItem>)ViewBag.CategoryList,
         "Kategori Seçiniz",
         new { @class = "form-control" }*@
 
-    @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.category,"Kategoriyi Seçin", new {@class = "form-control"})
+    @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.category,"Select Category", new {@class = "form-control"})
     
 
     
@@ -32,7 +32,7 @@
     <br />
 
     <br />
-    <button class="btn btn-outline-primary">Kaydet</button>
+    <button class="btn btn-outline-primary">Add</button>
 
 
 </form>

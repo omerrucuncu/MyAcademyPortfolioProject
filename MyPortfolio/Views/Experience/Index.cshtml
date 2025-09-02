@@ -8,19 +8,19 @@
     
 <br />
 <br />
-<h3>Deneyimler Sayfası</h3>
+<h3>Experiences Page</h3>
 
 <table class="table table-bordered">
     <tr>
         <th style="text-align: center; align-content: center">#</th>
-        <th style="text-align: center; align-content: center">Başlangıç Yılı</th>
-        <th style="text-align: center; align-content: center">Bitiş Yılı</th>
-        <th style="text-align: center; align-content: center">Ünvan</th>
-        <th style="text-align: center; align-content: center">Açıklama</th>
-        <th style="text-align: center; align-content: center">Şirket Adı</th>
-        <th style="text-align: center; align-content: center">Konum</th>
-        <th style="text-align: center; background-color : red ; align-content : center">Sil</th>
-        <th style="text-align: center; background-color : green ; align-content: center">Güncelle</th>
+        <th style="text-align: center; align-content: center">Start Year</th>
+        <th style="text-align: center; align-content: center">End Year</th>
+        <th style="text-align: center; align-content: center">Title</th>
+        <th style="text-align: center; align-content: center">Description</th>
+        <th style="text-align: center; align-content: center">Company</th>
+        <th style="text-align: center; align-content: center">Location</th>
+        <th style="text-align: center; background-color : red ; align-content : center">Delete</th>
+        <th style="text-align: center; background-color : green ; align-content: center">Update</th>
         
     </tr>
     @foreach (var item in Model)
@@ -34,8 +34,8 @@
             <td style="align-content: center; text-align: center">@item.Company</td>
             <td style="align-content: center; text-align: center">@item.Location</td>
             
-            <td style="text-align: center; align-content: center"><a href="/Experience/DeleteExperience/@item.ExperienceId" class="btn btn-outline-danger ">Sil</a></td>
-            <td style="text-align: center; align-content: center"><a href="/Experience/UpdateExperience/@item.ExperienceId" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Experience/DeleteExperience/@item.ExperienceId" class="btn btn-outline-danger ">Delete</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Experience/UpdateExperience/@item.ExperienceId" class="btn btn-outline-success">Update</a></td>
             
         </tr>
     }
@@ -43,5 +43,5 @@
 
 </table>
 <br />
-<a href="/Experience/AddExperience" class="btn btn-outline-dark">Yeni Deneyim Ekle</a>
+<a href="/Experience/AddExperience" class="btn btn-outline-dark">Add New Experience</a>
 

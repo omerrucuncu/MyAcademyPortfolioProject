@@ -5,17 +5,17 @@
 }
 <br />
 <br />
-<h3>Projeler Sayfası</h3>
+<h3>Projects Page</h3>
 
 <table class="table table-bordered">
     <tr>
         <th style="text-align: center; align-content: center">#</th>
-        <th style="text-align: center; align-content: center">Resim URL</th>
-        <th style="text-align: center; align-content: center">Proje Adı</th>
-        <th style="text-align: center; align-content: center">Kategori</th>
+        <th style="text-align: center; align-content: center">Image URL</th>
+        <th style="text-align: center; align-content: center">Project Name</th>
+        <th style="text-align: center; align-content: center">Category</th>
         <th style="text-align: center; align-content: center">Github URL</th>
-        <th style="text-align: center; align-content: center; background-color : red">Sil</th>
-        <th style="text-align: center; align-content: center; background-color : green">Güncelle</th>
+        <th style="text-align: center; align-content: center; background-color : red">Delete</th>
+        <th style="text-align: center; align-content: center; background-color : green">Update</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -25,12 +25,12 @@
             <td style="text-align: center; align-content: center">@item.ProjectName</td>
             <td style="text-align: center; align-content: center">@item.TblCategories.CategoryName</td>
             <td style="text-align: center; align-content: center"><a href="@item.GitHubUrl" target="_blank">Github Linki</a></td>
-            <td style="text-align: center; align-content: center"><a href="/Project/DeleteProject/@item.ProjectId" class="btn btn-outline-danger">Sil</a></td>
-            <td style="text-align: center; align-content: center"><a href="/Project/UpdateProject/@item.ProjectId" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Project/DeleteProject/@item.ProjectId" class="btn btn-outline-danger">Delete</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Project/UpdateProject/@item.ProjectId" class="btn btn-outline-success">Update</a></td>
         </tr>
     }
 
 
 </table>
 <br />
-<a href="/Project/AddProject" class="btn btn-outline-dark">Yeni Proje Ekle</a>
+<a href="/Project/AddProject" class="btn btn-outline-dark">Add New Project</a>

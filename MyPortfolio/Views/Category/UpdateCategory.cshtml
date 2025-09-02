@@ -5,20 +5,20 @@
 }
 <br />
 <br />
-<h3>Kategori Güncelleme Sayfası</h3>
+<h3>Update Category Page</h3>
 
 <form method="post">
 
     <input type="hidden" name="CategoryId" value="@Model.CategoryId" />
 
-    <label>Kategori Adı</label>
+    <label>Category Name</label>
     @*<input type="text" name="CategoryName" value="@Model.CategoryName" class="form-control" />*@
 
     @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
     <br />
 
 
-    <button class="btn btn-outline-primary">Güncelle</button>
+    <button class="btn btn-outline-primary">Update</button>
 
 </form>
 

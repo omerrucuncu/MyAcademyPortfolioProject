@@ -42,7 +42,7 @@ namespace MyPortfolio.Controllers
 
         [HttpGet]
 
-        public ActionResult UpdateSkill(int id) // önce id ye bağlı değerleri getirmesi için (formu açınca o idye bağlı değerlerin gelmesi) httpget metodu 
+        public ActionResult UpdateSkill(int id)  
         {
             var skill = db.TblSkills.Find(id);
             return View(skill);

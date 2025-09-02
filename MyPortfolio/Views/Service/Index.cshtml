@@ -7,7 +7,7 @@
 
 <br />
 <br />
-<h3>Services Page</h3>
+<h2>Services Page</h2>
 
 <table class="table table-bordered">
     <tr>
@@ -28,7 +28,7 @@
             <td style="align-content: center; text-align: center"><img src="@item.Icon" style="height : 50px; width : 50px" /></td>
             <td style="align-content : center ; text-align : center">@item.Title</td>
             <td style="align-content: center; text-align: center">@item.Description</td>
-            <td style="align-content: center; text-align: center">@(item.Status == true ? "Aktif" : "Pasif")</td>
+            <td style="align-content: center; text-align: center">@(item.Status == true ? "Active" : "Passive")</td>
             <td style="text-align: center; align-content: center"><a href="/Service/DeleteService/@item.ServiceId" class="btn btn-outline-danger ">Delete</a></td>
             <td style="text-align: center; align-content: center"><a href="/Service/UpdateService/@item.ServiceId" class="btn btn-outline-success">Update</a></td>
             <td style="text-align: center; align-content: center"><a href="/Service/MakeActive/@item.ServiceId" class="btn btn-outline-info">Make Active</a></td>

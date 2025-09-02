@@ -5,17 +5,17 @@
 }
 <br />
 <br />
-<h3>Hizmet Updateme Sayfası</h3>
+<h3>Service Update Page</h3>
 
 <form method="post">
     <input type="hidden" name="ServiceId" value="@Model.ServiceId" />
-    <label>Resim URL</label>
+    <label>Image URL</label>
     <input type="text" name="Icon" value="@Model.Icon" class="form-control" />
     <br />
-    <label>Hizmet Adı</label>
+    <label>Service Name</label>
     <input type="text" name="Title" value="@Model.Title" class="form-control" />
     <br />
-    <label>Açıklama</label>
+    <label>Description</label>
     <textarea name="Description" class="form-control">@Model.Description</textarea>
     <br />
     <button class="btn btn-outline-primary">Update</button>

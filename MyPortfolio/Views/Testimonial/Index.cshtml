@@ -7,21 +7,21 @@
 
 <br />
 <br />
-<h3>Referanslar Sayfası</h3>
+<h3>Testimonials Page</h3>
 
 <table class="table table-bordered">
     <tr>
         <th style="text-align: center; align-content: center">#</th>
-        <th style="text-align: center; align-content: center">Resim URL</th>
-        <th style="text-align: center; align-content: center">Yorum</th>
-        <th style="text-align: center; align-content: center">Ad Soyad</th>
-        <th style="text-align: center; align-content: center">Ünvan</th>
-        <th style="text-align: center; align-content: center">Yorum Tarihi</th>
-        <th style="text-align: center; align-content: center">Durum</th>
+        <th style="text-align: center; align-content: center">Image URL</th>
+        <th style="text-align: center; align-content: center">Comment</th>
+        <th style="text-align: center; align-content: center">Name Surname</th>
+        <th style="text-align: center; align-content: center">Title</th>
+        <th style="text-align: center; align-content: center">Comment Date</th>
+        <th style="text-align: center; align-content: center">Status</th>
         <th style="text-align: center; background-color : red ; align-content : center">Delete</th>
         <th style="text-align: center; background-color : green ; align-content: center">Update</th>
-        <th style="text-align: center; align-content: center">Aktif Yap</th>
-        <th style="text-align: center; align-content: center">Pasif Yap</th>
+        <th style="text-align: center; align-content: center">Make Active</th>
+        <th style="text-align: center; align-content: center">Make Passive</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -37,13 +37,13 @@
 
             <td style="text-align: center; align-content: center"><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-outline-danger ">Delete</a></td>
             <td style="text-align: center; align-content: center"><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-outline-success">Update</a></td>
-            <td style="text-align: center; align-content: center"><a href="/Testimonial/MakeActive/@item.TestimonialId" class="btn btn-outline-info">Aktif Yap</a></td>
-            <td style="text-align: center; align-content: center"><a href="/Testimonial/MakePassive/@item.TestimonialId" class="btn btn-outline-warning">Pasif Yap</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Testimonial/MakeActive/@item.TestimonialId" class="btn btn-outline-info">Make Active</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Testimonial/MakePassive/@item.TestimonialId" class="btn btn-outline-warning">Make Passive</a></td>
         </tr>
     }
 
 
 </table>
 <br />
-<a href="/Testimonial/AddTestimonial" class="btn btn-outline-dark">Yeni Referans Ekle</a>
+<a href="/Testimonial/AddTestimonial" class="btn btn-outline-dark">Add New Testimonial</a>
 

@@ -1,0 +1,32 @@
+﻿@model MyPortfolio.Models.TblTestimonials
+@{
+    ViewBag.Title = "AddTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Referans Ekleme Sayfası</h3>
+
+<form method="post">
+    <label>Resim URL</label>
+    <input type="text" name="ImageUrl" class="form-control" />
+    <br />
+    <label>Yorum</label>
+    <input type="text" name="Comment" class="form-control" />
+    <br />
+    <label>Ad Soyad</label>
+    <input name="NameSurname" class="form-control" />
+    <br />
+    <label>Ünvan</label>
+    <input name="Title" class="form-control" />
+    <br />
+    <label>Yorum Tarihi</label>
+    <input type="datetime" name="CommentDate" class="form-control" value="@DateTime.Now" />
+    <br />
+    
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+
+</form>

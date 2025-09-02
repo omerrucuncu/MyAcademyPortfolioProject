@@ -20,7 +20,7 @@
     <input type="text" name="Title" class="form-control" value="@Model.Title" />
     <br />
     <label>Açıklama</label>
-    <textarea name="Description" class="form-control" value="@Model.Description"></textarea>
+    <textarea maxlength="300" name="Description" class="form-control" value="@Model.Description"></textarea>
     <br />
     <label>Şirket Adı</label>
     <input type="text" name="Company" class="form-control" value="@Model.Company" />
@@ -29,6 +29,7 @@
     <input type="text" name="Location" class="form-control" value="@Model.Location" />
     <br />
     <button class="btn btn-outline-primary">Güncelle</button>
+    
 
 
 

@@ -1,0 +1,41 @@
+﻿@model MyPortfolio.Models.TblTeams
+@{
+    ViewBag.Title = "AddTeam";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Takım Üyesi Ekleme Sayfası</h3>
+
+<form method="post">
+    <label>Resim URL</label>
+    <input type="text" name="ImageUrl" class="form-control" />
+    <br />
+    <label>Ad Soyad</label>
+    <input type="text" name="NameSurname" class="form-control" />
+    <br />
+    <label>Ünvan</label>
+    <input name="Title" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" />
+    <br />
+    <label>TwitterUrl</label>
+    <input type="text" name="TwitterUrl" class="form-control" />
+    <br />
+    <label>FacebookUrl</label>
+    <input type="text" name="FacebookUrl" class="form-control" />
+    <br />
+    <label>LinkedInUrl</label>
+    <input type="text" name="LinkedInUrl" class="form-control" />
+    <br />
+    <label>InstagramUrl</label>
+    <input type="text" name="InstagramUrl" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+
+</form>
+

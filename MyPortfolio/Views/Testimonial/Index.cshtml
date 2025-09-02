@@ -1,0 +1,49 @@
+﻿@model List<MyPortfolio.Models.TblTestimonials>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Referanslar Sayfası</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th style="text-align: center; align-content: center">#</th>
+        <th style="text-align: center; align-content: center">Resim URL</th>
+        <th style="text-align: center; align-content: center">Yorum</th>
+        <th style="text-align: center; align-content: center">Ad Soyad</th>
+        <th style="text-align: center; align-content: center">Ünvan</th>
+        <th style="text-align: center; align-content: center">Yorum Tarihi</th>
+        <th style="text-align: center; align-content: center">Durum</th>
+        <th style="text-align: center; background-color : red ; align-content : center">Sil</th>
+        <th style="text-align: center; background-color : green ; align-content: center">Güncelle</th>
+        <th style="text-align: center; align-content: center">Aktif Yap</th>
+        <th style="text-align: center; align-content: center">Pasif Yap</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="align-content : center ; text-align : center">@item.TestimonialId</td>
+            <td style="align-content: center; text-align: center"><img src="@item.ImageUrl" style="height : 50px; width : 50px" /></td>
+            <td style="align-content : center ; text-align : center">@item.Comment</td>
+            <td style="align-content: center; text-align: center">@item.NameSurname</td>
+            <td style="align-content: center; text-align: center">@item.Title</td>
+            <td style="align-content: center; text-align: center">@item.CommentDate</td>
+            <td style="align-content: center; text-align: center">@(item.Status == true ? "Aktif" : "Pasif")</td>
+            
+
+            <td style="text-align: center; align-content: center"><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-outline-danger ">Sil</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Testimonial/MakeActive/@item.TestimonialId" class="btn btn-outline-info">Aktif Yap</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Testimonial/MakePassive/@item.TestimonialId" class="btn btn-outline-warning">Pasif Yap</a></td>
+        </tr>
+    }
+
+
+</table>
+<br />
+<a href="/Testimonial/AddTestimonial" class="btn btn-outline-dark">Yeni Referans Ekle</a>
+

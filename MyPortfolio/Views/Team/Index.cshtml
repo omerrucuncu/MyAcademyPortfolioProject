@@ -1,0 +1,52 @@
+﻿@model List<MyPortfolio.Models.TblTeams>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Takım Üyeleri Sayfası</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th style="text-align: center; align-content: center">#</th>
+        <th style="text-align: center; align-content: center">Resim URL</th>
+        <th style="text-align: center; align-content: center">Ad Soyad</th>
+        <th style="text-align: center; align-content: center">Ünvan</th>
+        <th style="text-align: center; align-content: center">Açıklama</th>
+        <th style="text-align: center; align-content: center">Twitter URL</th>
+        <th style="text-align: center; align-content: center">Facebook URL</th>
+        <th style="text-align: center; align-content: center">Linkedin URL</th>
+        <th style="text-align: center; align-content: center">Instagram URL</th>
+        <th style="text-align: center; align-content: center">Durum</th>
+        <th style="text-align: center; background-color : red ; align-content : center">Sil</th>
+        <th style="text-align: center; background-color : green ; align-content: center">Güncelle</th>
+        <th style="text-align: center; align-content: center">Aktif Yap</th>
+        <th style="text-align: center; align-content: center">Pasif Yap</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="align-content : center ; text-align : center">@item.TeamId</td>
+            <td style="align-content: center; text-align: center"><img src="@item" style="height : 50px; width : 50px" /></td>
+            <td style="align-content : center ; text-align : center">@item.NameSurname</td>
+            <td style="align-content: center; text-align: center">@item.Title</td>
+            <td style="align-content: center; text-align: center">@item.Description</td>
+            <td style="align-content: center; text-align: center">@item.TwitterUrl</td>
+            <td style="align-content: center; text-align: center">@item.FacebookUrl</td>
+            <td style="align-content: center; text-align: center">@item.LinkedInUrl</td>
+            <td style="align-content: center; text-align: center">@item.InstagramUrl</td>
+            <td style="align-content: center; text-align: center">@(item.Status == true ? "Aktif" : "Pasif")</td>
+            <td style="text-align: center; align-content: center"><a href="/Team/DeleteTeam/@item.TeamId" class="btn btn-outline-danger ">Sil</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Team/UpdateTeam/@item.TeamId" class="btn btn-outline-success">Güncelle</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Team/MakeActive/@item.TeamId" class="btn btn-outline-info">Aktif Yap</a></td>
+            <td style="text-align: center; align-content: center"><a href="/Team/MakePassive/@item.TeamId" class="btn btn-outline-warning">Pasif Yap</a></td>
+        </tr>
+    }
+
+
+</table>
+<br />
+<a href="/Team/AddTeam" class="btn btn-outline-dark">Yeni Takım Üyesi Ekle</a>
+

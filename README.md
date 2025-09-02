@@ -61,12 +61,3 @@ Note on authentication:
 - App_Start: `BundleConfig` for CSS/JS bundling
 - Models: Entity Framework context and entity classes
 
-## Development Notes
-
-- Portfolio filter uses category CSS classes based on `CategoryId`.
-- Bundling includes Bootstrap and jQuery; update under `App_Start/BundleConfig.cs`.
-- GitHub buttons on projects open repository links in a new tab.
-
-## License
-
-Add your preferred license.

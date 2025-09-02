@@ -2,6 +2,10 @@
 
 A personal portfolio web application with a simple admin panel, built with ASP.NET MVC 5 and Entity Framework 6 on .NET Framework 4.7.2.
 
+## Project Video
+
+https://github.com/user-attachments/assets/1a45198c-5838-47fd-bd33-7e3d82f18f46
+
 ## Features
 
 - Public site (no login required)
@@ -62,6 +66,3 @@ Note on authentication:
 - Models: Entity Framework context and entity classes
 
 
-## Project Video
-
-https://github.com/user-attachments/assets/1a45198c-5838-47fd-bd33-7e3d82f18f46

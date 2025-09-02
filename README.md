@@ -61,3 +61,14 @@ Note on authentication:
 - App_Start: `BundleConfig` for CSS/JS bundling
 - Models: Entity Framework context and entity classes
 
+## Project Images 
+
+- ![Home Page](https://via.placeholder.com/800x600.png?text=Home+Page)
+- ![About Section](https://via.placeholder.com/800x600.png?text=About+Section)
+- ![Services Section](https://via.placeholder.com/800x600.png?text=Services+Section)
+- ![Contact Form](https://via.placeholder.com/800x600.png?text=Contact+Form)
+
+
+## Project Video
+
+https://github.com/user-attachments/assets/1a45198c-5838-47fd-bd33-7e3d82f18f46
